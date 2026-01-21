@@ -1,0 +1,37 @@
+pid,ssid,gid,name,atmosphere,habitable,type
+PL001,SS001,G001,Mercury,None,0,Terrestrial
+PL002,SS001,G001,Venus,CO2 & N2,0,Terrestrial
+PL003,SS001,G001,Earth,N2 & O2,1,Terrestrial
+PL004,SS001,G001,Mars,CO2,1,Terrestrial
+PL005,SS001,G001,Jupiter,H2 & He,0,Gas Giant
+PL006,SS001,G001,Saturn,H2 & He,0,Gas Giant
+PL007,SS001,G001,Uranus,H2 & He & CH4,0,Ice Giant
+PL008,SS001,G001,Neptune,H2 & He & CH4,0,Ice Giant
+PL009,SS002,G001,Proxima Centauri b,Unknown,0,Terrestrial
+PL010,SS002,G001,Proxima Centauri c,Thin?,0,Super-Earth
+PL011,SS002,G001,Proxima Centauri d,Unknown,0,Terrestrial
+PL012,SS003,G002,Kepler-90 b,Unknown,0,Terrestrial
+PL013,SS003,G002,Kepler-90 c,Unknown,0,Terrestrial
+PL014,SS003,G002,Kepler-90 i,Unknown,0,Super-Earth
+PL015,SS003,G002,Kepler-90 d,Unknown,0,Mini-Neptune
+PL016,SS003,G002,Kepler-90 e,Unknown,0,Neptune-like
+PL017,SS003,G002,Kepler-90 f,H2/He?,0,Gas Giant
+PL018,SS003,G002,Kepler-90 g,H2/He?,0,Gas Giant
+PL019,SS003,G002,Kepler-90 h,H2/He?,0,Gas Giant
+PL020,SS005,G002,Ahly,H2/He?,0,Green Terrestrial
+PL022,SS007,G001,51 Pegasi b,H2 & He,0,Gas Giant
+PL023,NULL,G001,HD 209458 b,H2 & He,0,Gas Giant
+PL024,NULL,G001,GJ 436 b,H2 & He,0,Warm Neptune
+PL025,SS008,G001,Sirius-5,CO2/Sulphur,0,Terrestrial
+PL026,SS008,G001,Sirius-8,Nitrogen/Oxygen,1,Super-Earth
+PL027,SS008,G001,Sirius-12,Hydrogen/Helium,0,Sub-Neptune
+PL028,SS009,G001,Tyndareus,Thin Silicate,0,Terrestrial
+PL029,SS009,G001,Leda,Hydrogen/Methane,0,Ice Giant
+PL030,SS009,G001,Gemini Majoris,Ammonia Ice,0,Super-Jupiter
+PL031,NULL,G001,Kepler-186f,N2/O2,1,Earth Analog
+PL032,NULL,G002,WASP-12b,Carbon/Methane,0,Hot Jupiter
+PL033,NULL,G003,K2-18b,H2/He/Water Vap.,1,Hycean World
+PL034,NULL,G001,55 Cancri e,Supercritical Fluid,0,Lava World
+PL035,NULL,G002,Proxima b,CO2/N2,1,Super-Earth
+PL036,NULL,G003,HD 209458 b,Sodium/Oxygen,0,Puffy Gas Giant
+

@@ -1,0 +1,10 @@
+ssid,gid,name,size,age
+SS001,G001,The Solar System,2e5,4.57e9
+SS002,G001,Alpha Centuri System,1.34e4,5.26e9
+SS003,G002,Kepler-90 System,1.01e0,2e9
+SS004,G003,Empty Test System,1,1
+SS005,G003,No Star Test System,1,1
+SS006,G003,No Planet Test System,1,1
+SS007,G001,51 Pegasi System,1.11e0,6.1e9
+SS008,G001,Sirius System,3e0,242e6
+SS009,G001,Castor System,1e3,370e6

@@ -1,0 +1,32 @@
+sid,gid,ssid,name,age,radius,mass,temperature,luminosity,gravity,state
+ST001,G001,SS001,Sun,4.6e9,6.96e5,1.0e0,5772,1.0,2.74e2,Main Sequence
+ST002,G001,SS002,Alpha Centauri A,4.85e9,8.54e5,1.10e0,5790,1.519e0,2.00e2,Main Sequence
+ST003,G001,SS002,Alpha Centauri B,4.85e9,6.02e5,9.07e-1,5260,5.00e-1,2.34e2,Main Sequence
+ST004,G001,SS002,Proxima Centauri,4.85e9,1.01e5,1.23e-1,3040,1.38e-4,1.58e3,Main Sequence
+ST005,G002,SS003,Kepler-90,2.0e9,8.35e5,1.13e0,6080,1.7e0,2.51e2,Main Sequence
+ST006,G001,SS006,Fake Star,2.4e8,1.19e6,2.02e0,9940,2.52e1,1.86e2,Main Sequence
+ST007,G001,SS008,Sirius A,2.4e8,1.19e6,2.02e0,9940,2.52e1,1.86e2,Main Sequence
+ST008,G001,SS008,Sirius B,2.42e8,5.83e6,2.02e0,9940,2.50e1,4e8,White Dwarf
+ST010,G001,SS007,51 Pegasi,6.1e9,8.90e5,1.11e0,5790,1.31e0,2.10e2,Main Sequence
+ST011,G001,SS009,Castor Aa,3.78e6,1.45e6,2.37e0,1.03e4,8.4e2,1.6e4,Main Sequence
+ST012,G001,SS009,Castor Ab,3.8e7,7.45e7,3.37e0,2.02e4,10.4e0,1.6e4,Red Giant
+ST013,G001,SS009,Castor Ba,3.7e8,1.15e6,1.79e0,8.84e3,3.8e27,1.0e4,Main Sequence
+ST014,G001,SS009,Castor Bb,3.7e8,3.4e5,3.9e-1,3.7e3,2.3e24,1.0e5,Red Giant
+ST015,G001,SS009,Castor Ca,3.7e8,4.3e5,6.0e-1,3.82e3,2.8e25,4.3e4,Red Giant
+ST016,G001,SS009,Castor Cb,3.7e8,4.3e5,6.0e-1,3.82e3,2.8e25,4.3e4,Red Giant
+BH001,NULL,NULL,IGR-1 (Intergalactic Rogue),1.2e10,3.0e0,7.5e5,0,0,1.1e13,Black Hole
+BH002,G001,NULL,Sagittarius A*,1.3e10,1.20e7,4.30e6,1.2e-14,1.0e36,1.5e12,Black Hole
+BH003,G003,NULL,M87*,1.3e10,1.85e10,6.50e9,1.5e-17,1.0e40,3.0e11,Black Hole
+BH004,G001,NULL,Andromeda SMBH,1.3e10,3.0e8,1.0e8,1.0e-16,0.0e0,1.0e6,Black Hole
+BH005,NULL,NULL,Centaurus SMBH,1.2e10,1.2e9,4.0e8,2.5e-17,0.0e0,2.5e5,Black Hole
+BH006,G003,NULL,Quasar BH,1.0e10,3.0e9,1.0e9,1.0e-17,0.0e0,1.0e5,Black Hole
+BH007,NULL,NULL,Triangulum SMBH,1.3e10,1.5e7,5.0e6,2.0e-15,0.0e0,2.0e7,Black Hole
+BH008,G002,NULL,Phoenix Cluster BH,1.0e10,3.0e10,1.0e10,1.0e-19,0.0e0,1.0e3,Black Hole
+BH009,G003,NULL,Ultra-Massive BH,1.0e10,6.0e10,2.0e10,5.0e-20,0.0e0,5.0e2,Black Hole
+ST900,NULL,NULL,IGS-1,3.0e7,3.40e7,2.0e1,20000,1.5e5,1.0e2,Supergiant
+ST901,NULL,NULL,IGS-2,1.2e10,7.0e3,6.0e-1,12000,1.0e-3,1.0e5,White Dwarf
+ST902,NULL,NULL,Alpha Orionis Minor,4.6e9,6.96e5,1.0e0,5778,3.8e26,2.75e4,Main Sequence
+ST903,NULL,NULL,Betelguese Majoris,1.0e7,1.0e9,1.5e1,3500,5.0e30,1.0e-1,Supergiant
+ST904,NULL,NULL,Gamma Scorpii,1.0e10,1.0e8,8.0e-1,4000,1.5e27,1.0e2,Red Giant
+ST905,NULL,NULL,Epsilon Lyrae C,1.2e10,7.0e3,6.0e-1,12000,1.0e24,1.0e6,White Dwarf
+ST906,NULL,NULL,Pulsar X-1,1.0e7,1.0e1,2.0e0,1.0e6,1.0e25,1.0e14,Neutron Star
