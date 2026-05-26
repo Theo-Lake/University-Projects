@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gStyle.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- so Axios can be used -->
+    <script src="game.js" defer></script>
+    <title>Game Page</title>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <header>
+        <h1>Connect 4</h1>
+      </header>
+
+      <main>
+        <div class="row" aria-live="polite" aria-atomic="true">
+          <h3>Current player: </h3>
+          <div id="playerChip" aria-hidden="true"></div>
+        </div>
+        <!-- tabindex="0" is here so these buttons can be selected with just the tab key -->
+        <div class="row">
+          <button id="resetGame" tabindex="0" aria-label="Reset Game">Reset Game</button>
+          <button id="home" tabindex="0" aria-label="Go to Home">Home</button>
+        </div>
+
+        <div id="Alert" class="alert" role="dialog" aria-modal="true" aria-labelledby="alertMessage" aria-hidden="true">
+          <div class="alertBox">
+            <p id="alertMessage"></p>
+            <div style="grid-row: span;">
+              <button class="alertButtons" id="Confirm" tabindex="0">Yes</button>
+              <button class="alertButtons" id="Cancel" tabindex="0">No</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="npWaiting" class="alert" role="dialog" aria-modal="true" aria-label="Waiting for opponent" aria-hidden="true">
+          <div class="alertBox">
+            <div style="grid-row: span;">
+              <p>Waiting for opponent...</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="wrongTurn" class="alert" role="dialog" aria-modal="true" aria-label="Not your turn" aria-hidden="true">
+          <div class="alertBox">
+            <div style="grid-row: span;">
+              <p>Not your Turn!</p>
+              <button class="alertButton" id="okButton" tabindex="0">ok</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hoverRow" aria-hidden="true">
+          <div class="hoverChip" id="0"></div>
+          <div class="hoverChip" id="1"></div>
+          <div class="hoverChip" id="2"></div>
+          <div class="hoverChip" id="3"></div>
+          <div class="hoverChip" id="4"></div>
+          <div class="hoverChip" id="5"></div>
+          <div class="hoverChip" id="6"></div>
+        </div>
+
+        <!-- tabindex="0" on every cell so the whole board is navigable with just the tab key -->
+        <div class="gameBoard" role="group" aria-label="Connect 4 game board">
+          <button class="cell" tabindex="0" data-row="0" data-col="0" aria-label="Column 1, Row 1"></button>
+          <button class="cell" tabindex="0" data-row="0" data-col="1" aria-label="Column 2, Row 1"></button>
+          <button class="cell" tabindex="0" data-row="0" data-col="2" aria-label="Column 3, Row 1"></button>
+          <button class="cell" tabindex="0" data-row="0" data-col="3" aria-label="Column 4, Row 1"></button>
+          <button class="cell" tabindex="0" data-row="0" data-col="4" aria-label="Column 5, Row 1"></button>
+          <button class="cell" tabindex="0" data-row="0" data-col="5" aria-label="Column 6, Row 1"></button>
+          <button class="cell" tabindex="0" data-row="0" data-col="6" aria-label="Column 7, Row 1"></button>
+          <button class="cell" tabindex="0" data-row="1" data-col="0" aria-label="Column 1, Row 2"></button>
+          <button class="cell" tabindex="0" data-row="1" data-col="1" aria-label="Column 2, Row 2"></button>
+          <button class="cell" tabindex="0" data-row="1" data-col="2" aria-label="Column 3, Row 2"></button>
+          <button class="cell" tabindex="0" data-row="1" data-col="3" aria-label="Column 4, Row 2"></button>
+          <button class="cell" tabindex="0" data-row="1" data-col="4" aria-label="Column 5, Row 2"></button>
+          <button class="cell" tabindex="0" data-row="1" data-col="5" aria-label="Column 6, Row 2"></button>
+          <button class="cell" tabindex="0" data-row="1" data-col="6" aria-label="Column 7, Row 2"></button>
+          <button class="cell" tabindex="0" data-row="2" data-col="0" aria-label="Column 1, Row 3"></button>
+          <button class="cell" tabindex="0" data-row="2" data-col="1" aria-label="Column 2, Row 3"></button>
+          <button class="cell" tabindex="0" data-row="2" data-col="2" aria-label="Column 3, Row 3"></button>
+          <button class="cell" tabindex="0" data-row="2" data-col="3" aria-label="Column 4, Row 3"></button>
+          <button class="cell" tabindex="0" data-row="2" data-col="4" aria-label="Column 5, Row 3"></button>
+          <button class="cell" tabindex="0" data-row="2" data-col="5" aria-label="Column 6, Row 3"></button>
+          <button class="cell" tabindex="0" data-row="2" data-col="6" aria-label="Column 7, Row 3"></button>
+          <button class="cell" tabindex="0" data-row="3" data-col="0" aria-label="Column 1, Row 4"></button>
+          <button class="cell" tabindex="0" data-row="3" data-col="1" aria-label="Column 2, Row 4"></button>
+          <button class="cell" tabindex="0" data-row="3" data-col="2" aria-label="Column 3, Row 4"></button>
+          <button class="cell" tabindex="0" data-row="3" data-col="3" aria-label="Column 4, Row 4"></button>
+          <button class="cell" tabindex="0" data-row="3" data-col="4" aria-label="Column 5, Row 4"></button>
+          <button class="cell" tabindex="0" data-row="3" data-col="5" aria-label="Column 6, Row 4"></button>
+          <button class="cell" tabindex="0" data-row="3" data-col="6" aria-label="Column 7, Row 4"></button>
+          <button class="cell" tabindex="0" data-row="4" data-col="0" aria-label="Column 1, Row 5"></button>
+          <button class="cell" tabindex="0" data-row="4" data-col="1" aria-label="Column 2, Row 5"></button>
+          <button class="cell" tabindex="0" data-row="4" data-col="2" aria-label="Column 3, Row 5"></button>
+          <button class="cell" tabindex="0" data-row="4" data-col="3" aria-label="Column 4, Row 5"></button>
+          <button class="cell" tabindex="0" data-row="4" data-col="4" aria-label="Column 5, Row 5"></button>
+          <button class="cell" tabindex="0" data-row="4" data-col="5" aria-label="Column 6, Row 5"></button>
+          <button class="cell" tabindex="0" data-row="4" data-col="6" aria-label="Column 7, Row 5"></button>
+          <button class="cell" tabindex="0" data-row="5" data-col="0" aria-label="Column 1, Row 6"></button>
+          <button class="cell" tabindex="0" data-row="5" data-col="1" aria-label="Column 2, Row 6"></button>
+          <button class="cell" tabindex="0" data-row="5" data-col="2" aria-label="Column 3, Row 6"></button>
+          <button class="cell" tabindex="0" data-row="5" data-col="3" aria-label="Column 4, Row 6"></button>
+          <button class="cell" tabindex="0" data-row="5" data-col="4" aria-label="Column 5, Row 6"></button>
+          <button class="cell" tabindex="0" data-row="5" data-col="5" aria-label="Column 6, Row 6"></button>
+          <button class="cell" tabindex="0" data-row="5" data-col="6" aria-label="Column 7, Row 6"></button>
+        </div>
+        <h4 id="description">Click on any column to drop your piece. Connect 4 pieces in a row to win!</h4>
+      </main>
+    </div>
+  </body>
+</html>

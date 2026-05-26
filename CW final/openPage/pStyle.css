@@ -1,0 +1,189 @@
+/* Main body style config */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: rgb(225, 220, 240);       
+    font-family: Arial, sans-serif;
+}
+
+/* Title area, changing the welcome title, description and row through their ids, so that they are correclty formatted and colored. */
+#Welcome {
+    margin: 20px 0 0 20px;
+    color: rgb(120, 60, 200);
+    font-size: 32px;
+}
+
+#description {
+    margin: 5px 0 10px 20px;
+    color: #333;
+    font-weight: normal;
+}
+
+#row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+/* Cards */
+.container {
+    flex: 1;
+    min-height: 70vh;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.container h1 {
+    font-size: 20px;
+    color: #222;
+    margin-top: 0;
+}
+
+.container h4 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Username input */
+.user-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #666;
+    background: #f7f7f7;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.user-input:focus {
+    border-color: rgb(120, 60, 200);
+}
+
+/* Radio button options */
+.mode-option {
+    display: block;
+    margin: 10px 0;
+    padding: 14px 16px;
+    background: #f7f7f7;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.mode-option:has(input:checked) {
+    border-color: rgb(120, 60, 200);
+    background: white;
+}
+
+.mode-option input[type="radio"] {
+    accent-color: rgb(120, 60, 200);
+    margin-right: 8px;
+}
+
+#difficulty-option {
+    display: block;
+    margin: 10px 0 10px 24px;
+    padding: 14px 16px;
+    background: #f7f7f7;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#difficulty-option:has(input:checked) {
+    border-color: rgb(51, 124, 184);
+    background: white;
+}
+
+#difficulty-option input[type="radio"] {
+    accent-color: rgb(51, 124, 184);
+    margin-right: 8px;
+}
+
+/* Start Game button */
+#startGame {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: rgb(120, 60, 200);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+#startGame:hover {
+    opacity: 0.9;
+}
+
+/* High score list container */
+#highScoreTable{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Each user score row/card */
+.scoreCard{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #f7f7f7;
+  border: 2px solid transparent;
+}
+
+/* rank number */
+.score-rank{
+  font-weight: bold;
+  color: rgb(120, 60, 200);
+  width: 44px;            /* lines up all ranks */
+}
+
+/* username */
+.score-username{
+  font-weight: 600;
+  color: #222;
+  flex: 1;                /* pushes stats to the right */
+}
+
+/* scores row */
+.score-stats{
+  display: flex;
+  gap: 14px;
+  color: #333;
+  font-size: 14px;
+}
+
+/*  Responsive Design  */
+
+/* Mobile */
+@media (max-width: 600px) {
+    #Welcome { font-size: 24px; }
+
+    #row { flex-direction: column; }
+
+    .container {
+        min-height: unset;
+        margin: 5px 10px;
+        padding: 20px;
+    }
+}
+

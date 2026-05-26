@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="pStyle.css" />
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<!-- so Axios can be used -->
+		<script src="page.js" defer></script>
+		<title>Opening Game page</title>
+	</head>
+	<body>
+		<header>
+			<h1 id="Welcome">Welcome to Connect 4</h1>
+			<h3 id="description">Drop, Connect, and Win!</h3>
+		</header>
+
+		<main>
+			<!-- This div is to align the cards in the middle in a row -->
+			<div id="row">
+				<div name="Select Mode" class="container">
+					<h1>Start New game</h1>
+
+					<h4 id="username-label">Player Username:</h4>
+					<input
+						id="Username"
+						class="user-input"
+						placeholder="Enter your name"
+						aria-labelledby="username-label"
+						aria-required="true"
+					/>
+
+					<h4 id="p2Heading" style="display: none" aria-hidden="true">
+						Player 2 Username:
+					</h4>
+					<input
+						id="p2Username"
+						class="user-input"
+						style="display: none"
+						placeholder="Enter your name"
+						aria-labelledby="p2Heading"
+						aria-required="true"
+						aria-hidden="true"
+					/>
+
+					<div role="group" aria-labelledby="gamemode-label">
+						<h4 id="gamemode-label">Game Mode:</h4>
+
+						<!-- tabindex="0" on each radio so every option can be reached individually with tab -->
+						<label class="mode-option">
+							<input
+								type="radio"
+								name="mode"
+								value="pVp"
+								id="pVp"
+								tabindex="0"
+							/>
+							Player vs Player
+						</label>
+						<!-- These are the game modes which have a radio type (They can be chosen) -->
+						<label class="mode-option">
+							<input
+								type="radio"
+								name="mode"
+								value="pVai"
+								id="pVai"
+								tabindex="0"
+							/>
+							Player vs AI
+						</label>
+
+						<!-- tabindex="0" on startGame so it can be reached with just the tab key -->
+						<!-- These are the AI difficulty options which are initially invisible until pvai radio button is selected. -->
+						<div
+							id="difficultyGroup"
+							role="group"
+							aria-labelledby="difficulty-label"
+							style="display: none"
+							aria-hidden="true"
+						>
+							<h4 id="difficulty-label">Difficulty:</h4>
+
+							<label class="mode-option" id="difficulty-option">
+								<input
+									id="difficultyVal"
+									type="radio"
+									name="difficulty"
+									value="pVai_R"
+									tabindex="0"
+								/>
+								Random AI
+							</label>
+
+							<label class="mode-option" id="difficulty-option">
+								<input
+									id="difficultyVal"
+									type="radio"
+									name="difficulty"
+									value="pVai_I"
+									tabindex="0"
+								/>
+								Intermediate AI
+							</label>
+
+							<label class="mode-option" id="difficulty-option">
+								<input
+									id="difficultyVal"
+									type="radio"
+									name="difficulty"
+									value="pVai_A"
+									tabindex="0"
+								/>
+								Advanced AI
+							</label>
+						</div>
+
+						<label class="mode-option">
+							<input
+								id="pVnp"
+								type="radio"
+								name="mode"
+								value="pVnp"
+								tabindex="0"
+							/>
+							Player vs Network Player
+						</label>
+					</div>
+					<button id="startGame" tabindex="0" aria-label="Start Game">
+						Start Game
+					</button>
+				</div>
+
+				<div name="High Score Display" class="container">
+					<h1>High Scores:</h1>
+					<div
+						id="highScoreTable"
+						role="region"
+						aria-label="High Scores"
+					></div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
